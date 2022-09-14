@@ -11,9 +11,7 @@ pipeline {
             }
         }
         stage('Push to dockerhub') {
-            when {
-                branch 'master'
-            }
+         
             steps {
                 // withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerPassword', usernameVariable: 'dockerUsername')]) {
                     sh "docker login -u vaibhavrathod -p zerov@09876"
