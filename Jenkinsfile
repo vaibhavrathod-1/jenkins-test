@@ -17,7 +17,7 @@ pipeline {
             steps {
                 // withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'dockerPassword', usernameVariable: 'dockerUsername')]) {
                     sh "docker login -u vaibhavrathod -p zerov@09876"
-                    sh "docker push ${env.IMAGE}:${TAG}"
+                    sh "docker push ${IMAGE}:${TAG}"
                 }
             }
         }
